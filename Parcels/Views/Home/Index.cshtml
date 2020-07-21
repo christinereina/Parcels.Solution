@@ -3,21 +3,39 @@
   <head>
     <meta charset='utf-8'>
     <title>Shipping Calculator</title>
-    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
   </head>
   <body>
-    <h1>Welcome to the shipping calculator!</h1>
+    <div class="container">
+    <h1>KSC Shipping</h1>
     <form action="/parcel" method="post">
-      <label for="height">Enter Height:</label>
-      <input id="height" name="height" type="number" min= "0" required> inches<br>
-      <label for="width">Enter Width: </label>
-      <input id="width" name="width" type="number" min= "0" required> inches<br>
-      <label for="Length">Enter Length:</label>
-      <input id="length" name="length" type="number"min= "0" required> inches<br>
-      <label for="weight">Enter Weight:</label>
-      <input id="weight" name="weight" type="number" min= "0" step ="0.1" required> pound(s)<br>
+      <div class="form-group row">
+        <label for="height" class="col-form-label">Enter Height (in):</label>
+        <div class="col">
+          <input id="height" name="height" type="number" min= "0" required><br>
+        </div>
+      </div>
+      <div class="form-group row">  
+        <label for="width" class="col-form-label">Enter Width (in): </label>
+        <div class="col">
+          <input id="width" name="width" type="number" min= "0" required><br>
+        </div>
+      </div>
+      <div class="form-group row">  
+        <label for="Length" class="col-form-label">Enter Length (in):</label>
+        <div class="col">
+          <input id="length" name="length" type="number"min= "0" required><br>
+        </div>
+      </div>
+      <div class="form-group row">  
+        <label for="weight" class="col-form-label">Enter Weight (lbs):</label>
+        <div class="col">
+          <input id="weight" name="weight" type="number" min= "0" step ="0.1" required><br>
+        </div>
+      </div>
       <button type="submit">Submit</button>
     </form>
+    </div>
   </body> 
 </html>

@@ -1,0 +1,20 @@
+h1 {
+  color: navy;
+}
+
+body {
+  background-color: lightgray;
+  padding: 30px;
+}
+
+label{
+
+  float: left;
+  clear: left;
+  width: 135px;
+  text-align: left;
+}
+
+input {
+float: left;
+}
