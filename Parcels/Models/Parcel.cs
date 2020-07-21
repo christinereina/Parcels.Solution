@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace Parcels.Models
 {
   public class Parcel
@@ -20,16 +23,16 @@ namespace Parcels.Models
       return Length * Width * Height;
     }
 
-    public int CostToShip()
+    public string CostToShip()
     {
       int dimensionalWeight = Volume()/139;
       if (Weight > dimensionalWeight)
       {
-        return Weight * 0.5;
+        return ((Convert.ToDouble(Weight)) * 0.5).ToString("C");
       }
       else
       {
-        return (dimensionalWeight * 0.5);
+        return ((Convert.ToDouble(dimensionalWeight)) * 0.5).ToString("C");
       }
     }
   }
