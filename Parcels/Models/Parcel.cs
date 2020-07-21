@@ -35,5 +35,11 @@ namespace Parcels.Models
         return ((Convert.ToDouble(dimensionalWeight)) * 0.5).ToString("C");
       }
     }
-  }
+
+    public int[] GetBoxDimensions()
+    {
+      int[] returnArr = new int[] { Length, Width, Height, };
+      return returnArr;
+    }
+  } 
 }
